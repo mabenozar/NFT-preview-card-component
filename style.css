@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root {
+    --font:'Outfit', sans-serif;
+    --fontSize:17px;
+
+    --softBlue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    --softCyan: hsla(178, 100%, 50%,0.5);
+
+    --mainBG: hsl(217, 54%, 11%);
+    --cardBG: hsl(216, 50%, 16%);
+    --line: hsl(215, 32%, 27%); 
+    --white: hsl(0, 0%, 100%)
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+body {
+    background-color: var(--mainBG);
+    font-family: var(--font);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 327px;
+    background-color: var(--cardBG);
+    border-radius: 22px;
+    padding: 24px;
+}
+
+.avatar {
+    position: relative;
+}
+
+.avatar img {
+    border-radius: 8px;
+}
+
+.overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.overlay img {
+    position: absolute;
+    color: var(--white);
+
+}
+
+.overlay:hover {
+    background-color: var(--softCyan);
+    opacity:1;
+}
+
+.title {
+    color: var(--white);
+    margin-top: 30px;
+    margin-bottom: 22px;
+}
+
+.title:hover {
+    color: var(--cyan);
+    cursor: pointer;
+}
+
+.title h1 {
+    font-weight: 600;
+    font-size: 1.35rem;
+}
+
+.text p {
+    color: var(--softBlue);
+    font-size: var(--fontSize);
+    font-weight: 300;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 16px;
+}
+
+.stats1,
+.stats2 {
+    display: flex;
+    align-items: center;
+}
+
+.stats1 p {
+    color: var(--cyan);
+    margin-left: 7px;
+}
+
+.stats2 p {
+    color: var(--softBlue);
+    margin-left: 7px;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    margin-top: 16px;
+}
+
+.footer img {
+    width: 30px;
+    border-radius: 100%;
+    border: 1px solid var(--white);
+    margin-right: 17px;
+}
+
+.footer p {
+    color: var(--softBlue);
+}
+
+.footer span {
+    color: var(--white);
+}
+
+.footer span:hover {
+    color: var(--cyan);
+    cursor: pointer;
+}
